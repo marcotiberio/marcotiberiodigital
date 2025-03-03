@@ -3,21 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacked Links</title>
+    <title>tiberio.online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     <style>
+        .roboto-mono-tiberio {
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .sixtyfour-convergence-tiberio {
+            font-family: "Sixtyfour Convergence", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+              "BLED" 0,
+              "SCAN" 0,
+              "XELA" 0,
+              "YELA" 0;
+        }
+        .rubik-mono-one-regular {
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }          
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Rubik Mono One", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-style: normal;
+            font-variation-settings:
+              "BLED" 0,
+              "SCAN" 0,
+              "XELA" 0,
+              "YELA" 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
+            height: 100%;
+            background-color: #fff;
+            color: #000;
+            margin: auto;
         }
         .container {
-            text-align: center;
+            
+            text-align: left;
+            margin: auto;
             max-width: 1680px;
+            width: 100%;
+            padding: 40px;
+        }
+        .intro {
+            background: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: left;
+            width: calc(100% - 80px);
+            padding: 40px;
+        }
+        h2 {
+            margin: 0;
         }
         .link-list {
+            margin-top: 220px;
             list-style: none;
             padding: 0;
         }
@@ -25,21 +77,24 @@
             margin: 10px 0;
         }
         .link-list a {
-            color: #0073e6;
+            color: #000;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 3.5rem;
         }
         .link-list a:hover {
-            text-decoration: underline;
+            font-size: 3.8rem;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Marco Tiberio advices and helps clients to bring their digital projects to life. Marco is in charge of digital projects and he has been working both 
-            on web development and design for several high-end clients, from project conception to delivery. Defrost’s main goal is to provide their clients with 
-            well-structured user-oriented websites, apps and products. Here is a selection of projects we’ve worked on.
-        </h2>
+        <div class="intro">
+            <h2>Marco Tiberio advices and helps clients to bring their digital projects to life. Marco is in charge of digital projects and he has been working both 
+                on web development and design for several high-end clients, from project conception to delivery. Defrost’s main goal is to provide their clients with 
+                well-structured user-oriented websites, apps and products. Here is a selection of projects we’ve worked on.
+            </h2>
+        </div>
         <ul class="link-list">
             <li><a href="https://immpact.guide" target="_blank">immpact.guide</a></li>
             <li><a href="https://zerowastespieltag.de" target="_blank">zerowastespieltag.de</a></li>
