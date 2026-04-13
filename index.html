@@ -7,118 +7,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        rubik: ['"Rubik Mono One"', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
     <style>
-        .rubik-mono-one-regular {
-            font-family: "Rubik Mono One", monospace;
-            font-weight: 400;
-            font-style: normal;
-        }          
         body {
-            font-family: "Rubik Mono One", monospace;
-            font-weight: 400;
-            font-style: normal;
-            font-style: normal;
-            font-variation-settings:
-              "BLED" 0,
-              "SCAN" 0,
-              "XELA" 0,
-              "YELA" 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100%;
-            background-color: #fff;
-            color: #000;
-            margin: auto;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        .container {
-            text-align: left;
-            margin: auto;
-            width: 100%;
-            padding: 2%;
-        }
-        .intro {
-            background: rgb(100%, 100%, 100%, 0.5);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            text-align: left;
-            width: calc(100% - 4%);
-            padding: 2%;
-        }
-        h2 {
-            margin: 0;
-        }
-        .link-list {
-            margin-top: 250px;
-            list-style: none;
-            padding: 0;
-        }
-        .link-list li {
-            border-bottom: 6px solid #000;
-            border-top: 6px solid #000;
-            margin: 15px 0;
-        }
-        .link-list li:hover {
-            background-color: #000;
-            text-decoration: none;
-            padding: 0 20px;
-        }
-        .link-list li:hover a {
-            color: #fff;
-            text-align: right;
-        }
-        .link-list a {
-            display: block;
-            color: #000;
-            text-decoration: none;
-            font-size: 2.5rem;
-            line-height: 1.5;
-            transition: all 0.1s ease-in-out;
-            width: 100%;
-        }
-
-        @media screen and (max-width: 1024px) {
-            .container {
-                padding: 40px 20px;
-            }
-            .intro {
-                position: relative;
-                padding: 0;
-                width: 100%;
-            }
-            h2 {
-                font-size: 20px;
-                list-style: 1.2;
-            }
-            .link-list {
-                margin-top: 20px;
-                list-style: none;
-                padding: 0;
-            }
-            .link-list li {
-                border-bottom: 3px solid #000;
-                border-top: 3px solid #000;
-                margin: 10px 0;
-            }
-            .link-list a {
-                color: #000;
-                text-decoration: none;
-                font-size: 1.5rem;
-                line-height: 1.2;
-                transition: all 0.1s ease-in-out;
-                word-break: break-all;
-            }
+            font-variation-settings: "BLED" 0, "SCAN" 0, "XELA" 0, "YELA" 0;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="intro">
-            <h2>
+<body class="font-rubik font-normal not-italic flex justify-start items-center h-full bg-white text-black m-auto p-0 overflow-x-hidden">
+
+    <!-- Header -->
+    <div class="fixed top-0 left-0 w-full p-[15px] lg:p-[20px] flex justify-between items-center z-[100] bg-white">
+        <h2 class="uppercase text-[20px] lg:text-[24px]">Marco Tiberio</h2>
+        <nav>
+            <a id="about-toggle" class="cursor-pointer text-black no-underline lg:text-base hover:underline"><h2 class="text-[20px] lg:text-[24px]" id="about-toggle-text">About</h2></a>
+        </nav>
+    </div>
+
+    <!-- About modal overlay -->
+    <div id="about-overlay" class="fixed inset-0 bg-white z-[200] mt-[50px] lg:mt-[60px] flex items-start justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="about-content" class="w-full p-[15px] lg:p-[20px] translate-y-10 transition-transform duration-300">
+            <h2 class="m-0 text-[20px] lg:text-[24px] leading-[1.2] lg:text-[revert] lg:leading-[revert]">
                 Marco Tiberio advises and collaborates with clients to turn digital ideas into meaningful, functional realities. 
                 Blending visual and digital design with front-end development, he leads high-end digital projects from concept to launch, 
                 with a strong focus on usability, accessibility, structure, and long-term impact. His goal is to craft user-centric, 
@@ -126,43 +46,80 @@
                 Below is a selection of projects:
             </h2>
         </div>
-        <ul class="link-list">
-            <li><a href="https://brandmelder.org/" target="_blank">brandmelder.org</a></li>
-            <li><a href="https://womenshealthinnovation.org/" target="_blank">womenshealthinnovation.org</a></li>
-            <li><a href="https://immpact.guide" target="_blank">immpact.guide</a></li>
-            <li><a href="https://zeroisthero.de" target="_blank">zeroisthero.de</a></li>
-            <li><a href="https://sustainable-economy-summit.org" target="_blank">sustainable-economy-summit.org</a></li>
-            <li><a href="https://circular-structural-design.eu" target="_blank">circular-structural-design.eu</a></li>
-            <li><a href="https://crossboundary.com" target="_blank">crossboundary.com</a></li>
-            <li><a href="https://crossboundaryenergy.com" target="_blank">crossboundaryenergy.com</a></li>
-            <li><a href="https://energyalliance.org" target="_blank">energyalliance.org</a></li>
-            <li><a href="https://xellar.de" target="_blank">xellar.de</a></li>
-            <li><a href="https://www.oushaba.com/" target="_blank">oushaba.com</a></li>
-            <li><a href="https://www.jordanluca.com/" target="_blank">jordanluca.com</a></li>
-            <li><a href="https://www.isburning.com/" target="_blank">isburning.com</a></li>
-            <li><a href="https://sweetlimejuice.com/" target="_blank">sweetlimejuice.com</a></li>
-            <li><a href="https://pepalondon.com/" target="_blank">pepalondon.com</a></li>
-            <li><a href="https://prokip.care/" target="_blank">prokip.care</a></li>
-            <li><a href="https://montanwerke-brixlegg.com" target="_blank">montanwerke-brixlegg.com</a></li>
-            <li><a href="https://twistmuseum.com" target="_blank">twistmuseum.com</a></li>
-            <li><a href="https://circularhubs.de" target="_blank">circularhubs.de</a></li>
-            <li><a href="https://techstyler.fashion" target="_blank">techstyler.fashion</a></li>
-            <li><a href="https://dutchoriginals.com" target="_blank">dutchoriginals.com</a></li>
-            <li><a href="https://sos-humanity.org" target="_blank">sos-humanity.org</a></li>
-            <li><a href="https://spaceofurgency.org" target="_blank">spaceofurgency.org</a></li>
-            <li><a href="https://strumandiodine.com" target="_blank">strumandiodine.com</a></li>
-            <li><a href="https://fotogalleriet.no" target="_blank">fotogalleriet.no</a></li>
-            <li><a href="https://redesigningdeltas.org" target="_blank">redesigningdeltas.org</a></li>
-            <li><a href="https://vlan.radio" target="_blank">vlan.radio</a></li>
-            <li><a href="https://shashamovies.com" target="_blank">shashamovies.com</a></li>
-            <li><a href="https://studio-bob.com" target="_blank">studio-bob.com</a></li>
-            <li><a href="https://saferave.clubcommission.de" target="_blank">saferave.clubcommission.de</a></li>
-            <li><a href="https://awareness-akademie.de" target="_blank">awareness-akademie.de</a></li>
-            <li><a href="https://saatchiyates.com" target="_blank">saatchiyates.com</a></li>
-            <li><a href="https://urcloud.buycloud.space" target="_blank">urcloud.buycloud.space</a></li>
-            <li><a href="https://gupmagazine.com" target="_blank">gupmagazine.com</a></li>
-            <li><a href="https://spazioberlendis.it" target="_blank">spazioberlendis.it</a></li>
+    </div>
+
+    <!-- Main content -->
+    <div class="text-left m-auto w-full p-[15px] lg:p-[20px]">
+        <ul class="mt-[60px] lg:mt-[60px] list-none p-0">
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://brandmelder.org/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">brandmelder.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://brandmelder.org/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">womenshealthinnovation.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://immpact.guide" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">immpact.guide</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://zeroisthero.de" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">zeroisthero.de</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://sustainable-economy-summit.org" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">sustainable-economy-summit.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://circular-structural-design.eu" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">circular-structural-design.eu</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://crossboundary.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">crossboundary.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://crossboundaryenergy.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">crossboundaryenergy.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://energyalliance.org" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">energyalliance.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://xellar.de" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">xellar.de</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://www.oushaba.com/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">oushaba.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://www.jordanluca.com/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">jordanluca.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://www.isburning.com/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">isburning.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://sweetlimejuice.com/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">sweetlimejuice.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://pepalondon.com/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">pepalondon.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://prokip.care/" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">prokip.care</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://montanwerke-brixlegg.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">montanwerke-brixlegg.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://twistmuseum.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">twistmuseum.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://circularhubs.de" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">circularhubs.de</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://techstyler.fashion" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">techstyler.fashion</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://dutchoriginals.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">dutchoriginals.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://sos-humanity.org" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">sos-humanity.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://spaceofurgency.org" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">spaceofurgency.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://strumandiodine.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">strumandiodine.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://fotogalleriet.no" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">fotogalleriet.no</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://redesigningdeltas.org" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">redesigningdeltas.org</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://vlan.radio" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">vlan.radio</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://shashamovies.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">shashamovies.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://studio-bob.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">studio-bob.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://saferave.clubcommission.de" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">saferave.clubcommission.de</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://awareness-akademie.de" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">awareness-akademie.de</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://saatchiyates.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">saatchiyates.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://urcloud.buycloud.space" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">urcloud.buycloud.space</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://gupmagazine.com" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">gupmagazine.com</a></li>
+            <li class="group border-y-[3px] lg:border-y-[6px] border-black my-[10px] lg:my-[15px] hover:bg-black hover:px-5"><a href="https://spazioberlendis.it" target="_blank" class="block text-black no-underline text-[1.5rem] lg:text-[2.5rem] leading-[1.2] lg:leading-[1.5] transition-all duration-100 w-full break-all lg:break-normal group-hover:text-white group-hover:text-right">spazioberlendis.it</a></li>
         </ul>
     </div>
+
+    <script>
+        const overlay = document.getElementById('about-overlay');
+        const content = document.getElementById('about-content');
+        const toggleText = document.getElementById('about-toggle-text');
+        let isOpen = false;
+
+        function openOverlay() {
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100', 'pointer-events-auto');
+            content.classList.remove('translate-y-10');
+            content.classList.add('translate-y-0');
+            toggleText.textContent = 'Close';
+            isOpen = true;
+        }
+
+        function closeOverlay() {
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100', 'pointer-events-auto');
+            content.classList.add('translate-y-10');
+            content.classList.remove('translate-y-0');
+            toggleText.textContent = 'About';
+            isOpen = false;
+        }
+
+        document.getElementById('about-toggle').addEventListener('click', function() {
+            isOpen ? closeOverlay() : openOverlay();
+        });
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closeOverlay();
+        });
+    </script>
 </body>
 </html>
+
